@@ -9,8 +9,11 @@ redirect_from:
 Kenneth Skiba
 ======
 [Artificial Intelligence Group](https://www.fernuni-hagen.de/aig/en/)
+
 Faculty of Mathematics and Computer Science
+
 FernUniversität in Hagen, Germany
+
 Office: H 209
 
 About me
