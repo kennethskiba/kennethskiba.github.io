@@ -9,11 +9,8 @@ redirect_from:
 Kenneth Skiba
 ======
 [Artificial Intelligence Group](https://www.fernuni-hagen.de/aig/en/)
-
 Faculty of Mathematics and Computer Science
-
 FernUniversität in Hagen, Germany
-
 Office: H 209
 
 About me
@@ -22,7 +19,15 @@ I am a Postdoc in [Artificial Intelligence Group](https://www.fernuni-hagen.de/a
 
 I received my PhD degree in computer science from the FernUniversität in Hagen in 2025. Between 2019 and 2021 I was a research assistant at the University of Koblenz-Landau. I studied computer science at [Heinrich Heine University](https://www.cs.hhu.de/en/) in Düsseldorf Germany, where I obtained my Master degree (2019) and my Bachelor degree (2017). 
 
-Research interessts
+My research focuses on symbolic AI, particularly formal models of knowledge representation and non-monotonic reasoning. I take an interest in these topics from both a conceptual and an algorithmic perspective. I am particularly interested in computational complexity questions within this field.
+I have published several papers on formal argumentation, focusing on:
+- semantics for abstract argumentation frameworks and their generalisations
+- Graduality 
+- Uncertainty
+- Computational complexity
+- Connection to computational social choice
+- Connection to conditional logic
+
 
 News
 ======
