@@ -9,8 +9,9 @@ redirect_from:
 Kenneth Skiba
 ======
 [Artificial Intelligence Group](https://www.fernuni-hagen.de/aig/en/)
-
-FernUniversität in Hagen
+Faculty of Mathematics and Computer Science
+FernUniversität in Hagen, Germany
+Office: H 209
 
 About me
 ======
@@ -22,8 +23,6 @@ Research interessts
 
 News
 ======
-Date
-------
 - **July 01, 2026** Returned from my research stay at the [Individual and Collective Reasoning Group](https://icr.uni.lu/index.html) led by [Leon van der Torre](https://icr.uni.lu/leonvandertorre/) at the University of Luxembourg.
 - **June 17, 2026** Paper accepted for [COMMA 2026](https://comma2026.vercel.app/):
   > Ulla Wege, Kenneth Skiba, Matthias Thimm: *Aggregating Ranking-based Semantics in Abstract Argumentation*
