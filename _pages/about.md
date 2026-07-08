@@ -18,9 +18,9 @@ Office: H 209
 
 About me
 ======
-I am a Postdoc in [Artificial Intelligence Group](https://www.fernuni-hagen.de/aig/en/), led by [Matthias Thimm](https://www.mthimm.de/index.html) at the FernUniversität in Hagen, Germany. 
+I am a Postdoc in the [Artificial Intelligence Group](https://www.fernuni-hagen.de/aig/en/), led by [Matthias Thimm](https://www.mthimm.de/index.html) at the FernUniversität in Hagen, Germany. 
 
-I received my PhD degree in computer science from the FernUniversität in Hagen in 2025. Between 2019 and 2021 I was a research assistant at the University of Koblenz-Landau. I studied computer science at [Heinrich Heine University](https://www.cs.hhu.de/en/) in Düsseldorf Germany, where I obtained my Master degree (2019) and my Bachelor degree (2017). 
+I received my PhD degree in computer science from the FernUniversität in Hagen in 2025. Between 2019 and 2021 I was a research assistant at the [University of Koblenz-Landau](https://www.uni-koblenz.de/de/informatik/west). I studied computer science at [Heinrich Heine University](https://www.cs.hhu.de/en/) in Düsseldorf Germany, where I obtained my Master degree (2019) and my Bachelor degree (2017). 
 
 My research focuses on symbolic AI, particularly formal models of knowledge representation and non-monotonic reasoning. I take an interest in these topics from both a conceptual and an algorithmic perspective. I am particularly interested in computational complexity questions within this field.
 I have published several papers on formal argumentation, focusing on:
