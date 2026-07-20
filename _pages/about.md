@@ -7,7 +7,7 @@ redirect_from:
   - /about.html
 ---
 Kenneth Skiba
--------------
+=============
 [Artificial Intelligence Group](https://www.fernuni-hagen.de/aig/en/)
 
 Faculty of Mathematics and Computer Science
