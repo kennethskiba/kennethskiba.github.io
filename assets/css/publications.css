@@ -17,6 +17,7 @@
 .pub-workshop   { background: #8a8f98; }
 .pub-book       { background: #e0b400; }
 .pub-editorship { background: #17a2a2; }
+.pub-thesis { background: #a217a2; }
 
 .pub-year-heading {
   font-size: 1.3em; font-weight: 700; margin: 1.6em 0 0.8em;
@@ -33,6 +34,7 @@
 .pub-entry.pub-workshop   { border-left-color: #8a8f98; }
 .pub-entry.pub-book       { border-left-color: #e0b400; }
 .pub-entry.pub-editorship { border-left-color: #17a2a2; }
+.pub-entry.pub-thesis { border-left-color: #a217a2; }
 .pub-entry.pub-hidden { display: none; }
 
 .pub-badge {
@@ -46,6 +48,7 @@
 .pub-badge.pub-workshop   { background: #8a8f98; }
 .pub-badge.pub-book       { background: #b5960a; }
 .pub-badge.pub-editorship { background: #148a8a; }
+.pub-badge.pub-thesis { background: #a217a2; }
 
 .pub-title { font-weight: 600; }
 .pub-authors { color: #444; margin-top: 0.15em; }
