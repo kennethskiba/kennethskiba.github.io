@@ -100,6 +100,115 @@ details.pub-fold { flex-basis: 100%; }
 .pub-empty { color: #777; font-style: italic; padding: 1em 0; }
 </style>
 
+<script>
+(function () {
+  // ---------------------------------------------------------------
+  // Publication data
+  // type must be one of: "journal", "conference", "book", "editorship", "workshop"
+  // pdf: path to a PDF placed in this repo's /files/ folder (or a full URL), or null
+  // bibtex / abstract: fill in / replace with exact records as you go
+  // year: null is used for entries without a confirmed publication year
+  // ---------------------------------------------------------------
+  var PUBS = [
+    { year: 2025, type: "conference", authors: "Bengel, L., Buraglio, G., Maly, J., & Skiba, K.", title: "An Extension-Based Argument-Ranking Semantics: Social Rankings in Abstract Argumentation", venue: "Proceedings of the AAAI Conference on Artificial Intelligence (AAAI'25)", pdf: null, bibtex: "@inproceedings{BengelBMS2025,\n  author    = {Bengel, Lars and Buraglio, Giovanni and Maly, Jan and Skiba, Kenneth},\n  title     = {An Extension-Based Argument-Ranking Semantics: Social Rankings in Abstract Argumentation},\n  booktitle = {Proceedings of the AAAI Conference on Artificial Intelligence},\n  year      = {2025}\n}", abstract: "test" },
+  ];
 
+  var TYPE_LABEL = {
+    journal: "Journal Paper",
+    conference: "Conference Paper",
+    workshop: "Workshop / Other",
+    book: "Book",
+    editorship: "Editorship"
+  };
+
+  function escapeHtml(str) {
+    return String(str).replace(/[&<>"']/g, function (c) {
+      return { "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;" }[c];
+    });
+  }
+
+  function renderEntry(pub) {
+    var el = document.createElement("div");
+    el.className = "pub-entry pub-" + pub.type;
+    el.setAttribute("data-type", pub.type);
+
+    var badge = '<span class="pub-badge pub-' + pub.type + '">' + TYPE_LABEL[pub.type] + '</span>';
+    var title = '<div class="pub-title">' + badge + escapeHtml(pub.title) + '</div>';
+    var authors = '<div class="pub-authors">' + escapeHtml(pub.authors) + '</div>';
+    var venue = pub.venue ? '<div class="pub-venue">' + escapeHtml(pub.venue) + '</div>' : '';
+
+    var links = '<div class="pub-links">';
+    if (pub.pdf) {
+      links += '<a class="pub-pdf" href="' + escapeHtml(pub.pdf) + '" target="_blank" rel="noopener">PDF</a>';
+    }
+    if (pub.abstract) {
+      links += '<details class="pub-fold"><summary>Abstract</summary>' +
+               '<div class="pub-fold-body pub-abstract-body">' + escapeHtml(pub.abstract) + '</div></details>';
+    }
+    if (pub.bibtex) {
+      links += '<details class="pub-fold"><summary>BibTeX</summary>' +
+               '<div class="pub-fold-body"><pre>' + escapeHtml(pub.bibtex) + '</pre></div></details>';
+    }
+    links += '</div>';
+
+    el.innerHTML = title + authors + venue + links;
+    return el;
+  }
+
+  function render(filter) {
+    var list = document.getElementById("pub-list");
+    list.innerHTML = "";
+
+    var byYear = {};
+    var years = [];
+    PUBS.forEach(function (pub) {
+      var y = pub.year === null ? "n.d." : pub.year;
+      if (!byYear[y]) { byYear[y] = []; years.push(y); }
+      byYear[y].push(pub);
+    });
+
+    years.sort(function (a, b) {
+      if (a === "n.d.") return 1;
+      if (b === "n.d.") return -1;
+      return b - a;
+    });
+
+    var shown = 0;
+    years.forEach(function (y) {
+      var entries = byYear[y].filter(function (pub) {
+        return filter === "all" || pub.type === filter;
+      });
+      if (entries.length === 0) return;
+
+      var heading = document.createElement("div");
+      heading.className = "pub-year-heading";
+      heading.textContent = y;
+      list.appendChild(heading);
+
+      entries.forEach(function (pub) {
+        list.appendChild(renderEntry(pub));
+        shown++;
+      });
+    });
+
+    if (shown === 0) {
+      var empty = document.createElement("div");
+      empty.className = "pub-empty";
+      empty.textContent = "No publications in this category yet.";
+      list.appendChild(empty);
+    }
+  }
+
+  document.querySelectorAll(".pub-filter-btn").forEach(function (btn) {
+    btn.addEventListener("click", function () {
+      document.querySelectorAll(".pub-filter-btn").forEach(function (b) { b.classList.remove("active"); });
+      btn.classList.add("active");
+      render(btn.getAttribute("data-filter"));
+    });
+  });
+
+  render("all");
+})();
+</script>
 
 {% endraw %}
