@@ -45,7 +45,7 @@ author:
   researchgate     : # URL
   scopus           : # URL
   zotero           : # URL
-  dbpl             : "https://dblp.org/pid/271/8474.html"
+  dblp             : "https://dblp.org/pid/271/8474.html"
 
 
   # Repositories and software development
