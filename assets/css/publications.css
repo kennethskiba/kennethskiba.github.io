@@ -50,6 +50,7 @@
 .pub-title { font-weight: 600; }
 .pub-authors { color: #444; margin-top: 0.15em; }
 .pub-venue { font-style: italic; color: #555; margin-top: 0.1em; }
+.pub-note { font-weight: 700; color: #b5960a; margin-top: 0.3em; }
 
 .pub-links { margin-top: 0.5em; display: flex; flex-wrap: wrap; gap: 0.6em; }
 .pub-links a, .pub-links summary {
