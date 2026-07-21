@@ -96,6 +96,9 @@
 .badge-organisation { background: var(--accent-blue); }
 .badge-admin { background: var(--accent-grey); }
 .badge-reviewing { background: var(--accent-red); }
+.badge-award { background: var(--accent-gold); color: #4a3900; }
+.badge-visit { background: var(--accent-teal); }
+.badge-paper { background: var(--accent-blue); }
 
 /* Slightly livelier news/entry dates on the home page */
 .page__content strong {
@@ -142,6 +145,22 @@
 .activity-admin        { border-left-color: var(--accent-grey); }
 .activity-reviewing    { border-left-color: var(--accent-red); }
 .activity-section h3 { border-bottom: none; padding-bottom: 0; margin-top: 0.8em; }
+
+/* ---------------- Home / News ---------------- */
+.news-app { margin-top: 1em; }
+.news-item {
+  margin-bottom: 1em;
+  padding: 0.6em 1em;
+  background: #fafafa;
+  border-left: 4px solid var(--accent-grey);
+  border-radius: 4px;
+}
+.news-award { border-left-color: var(--accent-gold); }
+.news-visit { border-left-color: var(--accent-teal); }
+.news-paper { border-left-color: var(--accent-blue); }
+.news-meta { margin-bottom: 0.35em; }
+.news-date { font-size: 0.85em; color: #777; }
+.news-item blockquote { margin-bottom: 0; }
 
 /* ---------------- Nav underline colour ---------------- */
 /* Minimal Mistakes draws the masthead nav underline as a ::before pseudo-element.
@@ -207,10 +226,4 @@
    is revealed on hover; override its colour here. */
 .greedy-nav .visible-links a:before {
   background-color: var(--accent-blue);
-}
-
-/* Hide the theme-toggle gear in the masthead */
-.masthead .theme-toggle,
-.greedy-nav .theme-toggle {
-  display: none !important;
 }
