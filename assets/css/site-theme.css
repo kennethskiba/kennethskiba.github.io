@@ -208,3 +208,9 @@
 .greedy-nav .visible-links a:before {
   background-color: var(--accent-blue);
 }
+
+/* Hide the theme-toggle gear in the masthead */
+.masthead .theme-toggle,
+.greedy-nav .theme-toggle {
+  display: none !important;
+}
