@@ -100,3 +100,110 @@
 .page__content strong {
   color: var(--ink);
 }
+
+/* ---------------- Teaching page ---------------- */
+.teach-app { margin-top: 1em; }
+.teach-block {
+  margin-bottom: 1em;
+  padding: 0.6em 1em;
+  background: #fafafa;
+  border-left: 4px solid var(--accent-blue);
+  border-radius: 4px;
+}
+.teach-block:has(.badge-summer) { border-left-color: var(--accent-gold); }
+.teach-term { margin-bottom: 0.4em; }
+.teach-items { list-style: none; margin: 0; padding: 0; }
+.teach-items li { margin: 0.25em 0; }
+
+.role-tag {
+  display: inline-block;
+  font-size: 0.72em;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.02em;
+  padding: 0.1em 0.55em;
+  border-radius: 3px;
+  background: #e4e6ea;
+  color: #444;
+  margin-right: 0.5em;
+}
+
+/* ---------------- Activities page ---------------- */
+.activity-section {
+  margin: 0.3em 0 1.4em;
+  padding: 0.3em 1em 0.6em;
+  background: #fafafa;
+  border-left: 4px solid var(--accent-grey);
+  border-radius: 4px;
+}
+.activity-invited      { border-left-color: var(--accent-teal); }
+.activity-organisation { border-left-color: var(--accent-blue); }
+.activity-admin        { border-left-color: var(--accent-grey); }
+.activity-reviewing    { border-left-color: var(--accent-red); }
+.activity-section h3 { border-bottom: none; padding-bottom: 0; margin-top: 0.8em; }
+
+/* ---------------- Nav underline colour ---------------- */
+/* Minimal Mistakes draws the masthead nav underline as a ::before pseudo-element.
+   Override its colour here; also colour the currently active page's link. */
+.greedy-nav a:before {
+  background-color: var(--accent-blue);
+}
+.greedy-nav a.current {
+  color: var(--accent-blue);
+}
+.greedy-nav a.current:before {
+  background-color: var(--accent-blue);
+  /* make the underline stay visible on the active page, not just on hover */
+  height: 2px;
+  bottom: -5px;
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+}
+
+
+/* ---------------- Teaching page: semester cards ---------------- */
+.teach-group { margin-bottom: 1.4em; }
+.teach-card {
+  position: relative;
+  margin: 0 0 0.5em;
+  padding: 0.5em 0.9em;
+  background: #fafafa;
+  border-left: 4px solid var(--accent-grey);
+  border-radius: 4px;
+}
+.teach-summer .teach-card { border-left-color: var(--accent-gold); }
+.teach-winter .teach-card { border-left-color: var(--accent-blue); }
+.teach-role {
+  display: inline-block;
+  font-size: 0.78em;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.02em;
+  color: #666;
+  margin-right: 0.5em;
+}
+.teach-inst { color: #666; font-style: italic; }
+
+/* ---------------- Activities page: colour-coded entry cards ---------------- */
+.activities ul { list-style: none; margin: 0 0 1.2em; padding: 0; }
+.activities li {
+  position: relative;
+  margin-bottom: 0.5em;
+  padding: 0.55em 0.9em;
+  background: #fafafa;
+  border-left: 4px solid var(--accent-grey);
+  border-radius: 4px;
+}
+.activities-invited li      { border-left-color: var(--accent-teal); }
+.activities-organisation li { border-left-color: var(--accent-blue); }
+.activities-admin li        { border-left-color: var(--accent-grey); }
+.activities-reviewing li    { border-left-color: var(--accent-red); }
+
+/* ---------------- Nav underline colour (masthead menu) ----------------
+   Minimal Mistakes draws the underline as a :before pseudo-element that
+   is revealed on hover; override its colour here. */
+.greedy-nav .visible-links a:before {
+  background-color: var(--accent-blue);
+}
