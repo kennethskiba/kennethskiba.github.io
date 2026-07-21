@@ -144,7 +144,6 @@
 .activity-organisation { border-left-color: var(--accent-blue); }
 .activity-admin        { border-left-color: var(--accent-grey); }
 .activity-reviewing    { border-left-color: var(--accent-red); }
-.activity-award      { border-left-color: var(--accent-gold); }
 .activity-section h3 { border-bottom: none; padding-bottom: 0; margin-top: 0.8em; }
 
 /* ---------------- Home / News ---------------- */
@@ -152,7 +151,7 @@
 .news-item {
   margin-bottom: 1em;
   padding: 0.6em 1em;
-  background: #fafafa;
+  background: #eef0f2;
   border-left: 4px solid var(--accent-grey);
   border-radius: 4px;
 }
