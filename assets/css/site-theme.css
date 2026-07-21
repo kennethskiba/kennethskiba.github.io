@@ -151,7 +151,7 @@
 .news-item {
   margin-bottom: 1em;
   padding: 0.6em 1em;
-  background: #eef0f2;
+  background: ##fafafa;
   border-left: 4px solid var(--accent-grey);
   border-radius: 4px;
 }
