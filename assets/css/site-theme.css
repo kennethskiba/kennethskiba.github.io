@@ -76,15 +76,16 @@
   color: var(--accent-teal);
 }
 
-/* Small coloured pill badges, reused for semesters / activity categories */
+/* Small coloured rectangular badges (rounded corners), matching the
+   type badges used for each entry on the Publications page */
 .badge-pill {
   display: inline-block;
-  font-size: 0.72em;
+  font-size: 0.68em;
   font-weight: 700;
   text-transform: uppercase;
   letter-spacing: 0.03em;
-  padding: 0.15em 0.65em;
-  border-radius: 999px;
+  padding: 0.15em 0.55em;
+  border-radius: 3px;
   color: #fff;
   margin-right: 0.5em;
   vertical-align: middle;
