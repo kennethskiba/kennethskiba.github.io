@@ -182,48 +182,62 @@
   right: 0;
 }
 
+/* ---------------- Sidebar (author profile) ---------------- */
+/* Card look: white panel, soft shadow, thin border, rounded corners */
+.sidebar.author-profile,
+.author__content {
+  border-radius: 6px;
+}
+.sidebar.author-profile {
+  background: #fff;
+  border: 1px solid #ececec;
+  border-radius: 8px;
+  padding: 1.2em 1em;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.06);
+}
 
-/* ---------------- Teaching page: semester cards ---------------- */
-.teach-group { margin-bottom: 1.4em; }
-.teach-card {
-  position: relative;
-  margin: 0 0 0.5em;
-  padding: 0.5em 0.9em;
-  background: #fafafa;
-  border-left: 4px solid var(--accent-grey);
+/* Coloured ring around the profile photo */
+.author__avatar img {
+  border-radius: 50%;
+  border: 3px solid transparent;
+  background:
+    linear-gradient(#fff, #fff) padding-box,
+    linear-gradient(135deg, var(--accent-blue), var(--accent-teal)) border-box;
+}
+
+/* Thin grey rule + accent under the name, matching the page headings */
+.author__name {
+  border-bottom: 1px solid #e2e2e2;
+  padding-bottom: 0.35em;
+  color: var(--ink);
+}
+
+/* Follow button */
+.author__urls-wrapper button.btn--inverse,
+.author__urls-wrapper .btn {
+  background: var(--accent-blue);
+  border-color: var(--accent-blue);
+  color: #fff;
   border-radius: 4px;
+  transition: background 0.15s;
 }
-.teach-summer .teach-card { border-left-color: var(--accent-gold); }
-.teach-winter .teach-card { border-left-color: var(--accent-blue); }
-.teach-role {
-  display: inline-block;
-  font-size: 0.78em;
-  font-weight: 700;
-  text-transform: uppercase;
-  letter-spacing: 0.02em;
-  color: #666;
-  margin-right: 0.5em;
+.author__urls-wrapper button.btn--inverse:hover,
+.author__urls-wrapper .btn:hover {
+  background: #24548f;
+  border-color: #24548f;
 }
-.teach-inst { color: #666; font-style: italic; }
 
-/* ---------------- Activities page: colour-coded entry cards ---------------- */
-.activities ul { list-style: none; margin: 0 0 1.2em; padding: 0; }
-.activities li {
-  position: relative;
-  margin-bottom: 0.5em;
-  padding: 0.55em 0.9em;
-  background: #fafafa;
-  border-left: 4px solid var(--accent-grey);
-  border-radius: 4px;
+/* Contact / profile links list */
+.author__urls li a {
+  color: var(--ink);
+  transition: color 0.15s;
 }
-.activities-invited li      { border-left-color: var(--accent-teal); }
-.activities-organisation li { border-left-color: var(--accent-blue); }
-.activities-admin li        { border-left-color: var(--accent-grey); }
-.activities-reviewing li    { border-left-color: var(--accent-red); }
-
-/* ---------------- Nav underline colour (masthead menu) ----------------
-   Minimal Mistakes draws the underline as a :before pseudo-element that
-   is revealed on hover; override its colour here. */
-.greedy-nav .visible-links a:before {
-  background-color: var(--accent-blue);
+.author__urls li a:hover {
+  color: var(--accent-blue);
+}
+.author__urls li i,
+.author__urls li .svg-inline--fa {
+  color: var(--accent-blue);
+  width: 1.2em;
+  text-align: center;
 }
